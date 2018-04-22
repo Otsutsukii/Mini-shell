@@ -8,7 +8,7 @@ from collections import namedtuple
 
 mode = namedtuple("mode",["redir","append"])
 
-class processus(object):
+class processus(object):      # la class pour chaque fils qui executera la commande
     
     def __init__(self,number=None,pid=None,state=None,name=None,pipes=None):
         self.id=number
@@ -28,7 +28,7 @@ class processus(object):
 
 
 
-class Jobs(object):
+class Jobs(object):     # class job control , une liste qui maintient les pipes , les job en fg et bg , en suspensions 
     
     def __init__(self, jobs=[]):
         self.jobs = jobs
